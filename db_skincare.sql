@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Des 2022 pada 03.04
+-- Waktu pembuatan: 07 Des 2022 pada 02.15
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 8.1.10
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_skincare`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin123'),
+(2, 'husnul', '123'),
+(3, 'alimah', '123');
 
 -- --------------------------------------------------------
 
@@ -56,21 +77,14 @@ CREATE TABLE `tb_produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_produk`
---
-
-INSERT INTO `tb_produk` (`produk_id`, `category_id`, `nama_produk`, `harga`, `deskripsi`, `gambar`, `data_created`) VALUES
-(13, 6, 'NPURE Centella Asiatica Face Primer Serum', 120000, 'NPURE Centella Asiatica Face Primer Serum', 'produk1669947866.jpg', '2022-12-02 02:24:26'),
-(14, 6, 'NPURE Centella Asiatica Face Toner', 90000, 'NPURE Centella Asiatica Face Toner', 'produk1669947899.jpeg', '2022-12-02 02:24:59'),
-(15, 6, 'NPURE Essence Centella', 135000, 'NPURE Essence Centella', 'produk1669947932.jpg', '2022-12-02 02:25:32'),
-(16, 6, 'NPURE Centella Asiatica Face Wash', 90000, 'NPURE Centella Asiatica Face Wash', 'produk1669947965.jpg', '2022-12-02 02:26:05'),
-(17, 6, 'NPURE Night Cream Centella', 90000, 'NPURE Night Cream Centella', 'produk1669948001.jpg', '2022-12-02 02:26:41'),
-(18, 6, 'NPURE Day Cream Centella', 90000, 'NPURE Day Cream Centella', 'produk1669948037.jpg', '2022-12-02 02:27:17'),
-(19, 6, 'NPURE PAKET CICA (Wash,Toner,Day,Night,Primer Serum)', 490000, 'NPURE PAKET CICA (Wash,Toner,Day,Night,Primer Serum)', 'produk1669949286.jpg', '2022-12-02 02:27:45');
-
---
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `tb_category`
@@ -90,6 +104,12 @@ ALTER TABLE `tb_produk`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT untuk tabel `tb_category`
 --
 ALTER TABLE `tb_category`
@@ -99,7 +119,7 @@ ALTER TABLE `tb_category`
 -- AUTO_INCREMENT untuk tabel `tb_produk`
 --
 ALTER TABLE `tb_produk`
-  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

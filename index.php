@@ -111,8 +111,6 @@ include "database.php";
                 <!-- <h1><a href="index.php">Skincare</a></h1> -->
                 <ul>
                     <li><a href="daftar_produk.php">Beranda</a></li>
-                    <li><a href="produk.php">Data Produk</a></li>
-                    <!-- <li><a href="kategori.php">Data Kategori</a></li> -->
                     <li><a href="profil.php">Profil</a></li>
 					<li><a href="login.php">Login</a></li>
                 </ul>
@@ -175,7 +173,7 @@ include "database.php";
 				?>	
 					<a href="detail_produk.php?id=<?php echo $p['produk_id'] ?>">
 						<div class="col-4">
-							<img src="produk/<?php echo $p['gambar'] ?>">
+							<img src="/skincare/admin/produk/<?php echo $p['gambar'] ?>">
 							<p class="nama"><?php echo substr($p['nama_produk'], 0, 30) ?></p>
 							<p class="harga">Rp. <?php echo number_format($p['harga']) ?></p>
 						</div>

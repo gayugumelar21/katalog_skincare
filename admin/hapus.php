@@ -1,6 +1,6 @@
 <?php 
 	
-	include "database.php";
+	include "../database.php";
 
 	if(isset($_GET['idk'])){
 		$delete = mysqli_query($kon, "DELETE FROM tb_category WHERE category_id = '".$_GET['idk']."' ");

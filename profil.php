@@ -108,8 +108,6 @@
                 <!-- <h1><a href="index.php">Skincare</a></h1> -->
                 <ul>
                     <li><a href="daftar_produk.php">Beranda</a></li>
-                    <li><a href="produk.php">Data Produk</a></li>
-                    <!-- <li><a href="kategori.php">Data Kategori</a></li> -->
                     <li><a href="profil.php">Profil</a></li>
                     <li><a href="login.php">Login</a></li>
                 </ul>

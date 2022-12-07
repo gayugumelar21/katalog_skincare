@@ -1,5 +1,5 @@
 <?php
-include "database.php";
+include "../database.php";
 $produk = mysqli_query($kon, "SELECT * FROM tb_produk WHERE produk_id = '".$_GET['id']."' ");
 	if(mysqli_num_rows($produk) == 0){
 		echo '<script>window.location="produk.php"</script>';
@@ -13,21 +13,18 @@ $produk = mysqli_query($kon, "SELECT * FROM tb_produk WHERE produk_id = '".$_GET
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skincare</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     
 </head>
 <body>
 	<header>
             <div class="container">
-				<img src="img/logo.png" alt="" width="140" height="110">
+				<img src="../img/logo.png" alt="" width="140" height="110">
                 <!-- <h1><a href="index.php">Skincare</a></h1> -->
                 <ul>
-                    <li><a href="daftar_produk.php">Beranda</a></li>
-                    <li><a href="produk.php">Data Produk</a></li>
-                    <!-- <li><a href="kategori.php">Data Kategori</a></li> -->
-                    <li><a href="profil.php">Profil</a></li>
-					<li><a href="login.php">Login</a></li>
+                    <li><a href="produk.php">Produk</a></li>
+					<li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
     </header>

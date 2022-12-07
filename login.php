@@ -16,25 +16,40 @@
                 <!-- <h1><a href="index.php">Skincare</a></h1> -->
                 <ul>
                     <li><a href="daftar_produk.php">Beranda</a></li>
-                    <li><a href="produk.php">Data Produk</a></li>
-                    <!-- <li><a href="kategori.php">Data Kategori</a></li> -->
                     <li><a href="profil.php">Profil</a></li>
                     <li><a href="login.php">Login</a></li>
                 </ul>
             </div>
     </header>
-
-    <!-- Tentang -->
+    <br>
+        <?php
+        if(isset($_GET['pesan'])){
+            if($_GET['pesan'] == "gagal"){
+                echo '<script>alert("Login gagal! username dan password salah!")</script>';
+                echo '<script>window.location="login.php"</script>';
+            }
+            else if($_GET['pesan'] == "logout") {
+                echo "Anda berhasil logout";
+            }
+            else if($_GET['pesan'] == "belum_login"){
+                echo '<script>alert("Anda harus login untuk mengakses halaman admin")</script>';
+                echo '<script>window.location="index.php"</script>';
+            }
+        }
+        ?>
+    <br>
+    <!-- Login -->
 	<div class="section">
             <div class="box-login">
                 <div class="form-login">
-                    <form action="#" method="post" class="form-signin">
+                    <form action="cek_login.php" method="post" class="form-signin">
 
-                        <input type="email" id="email" name="email" placeholder="Masukan Email" value="" class="email" required autofocus>
+                        <input type="username" id="username" name="username" placeholder="Masukan Username" class="email" required autofocus>
 
-                        <input type="password" id="password" name="password" placeholder="Masukan Password" value="" class="password" required>
+                        <input type="password" id="password" name="password" placeholder="Masukan Password" class="password" required>
 
-                        <button type="submit" class="btn">Sign In</button>
+                        <!-- <button type="submit" class="btn">Sign In</button> -->
+                        <input type="submit" class="btn" value="Sign In">
                     </form>
                 </div>
 		</div>

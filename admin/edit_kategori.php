@@ -23,11 +23,8 @@ $kategori = mysqli_query($kon, "SELECT * FROM tb_category WHERE category_id = '"
                 <img src="img/logo.png" alt="" width="140" height="110">
                 <!-- <h1><a href="index.php">Skincare</a></h1> -->
                 <ul>
-                    <li><a href="daftar_produk.php">Beranda</a></li>
-                    <li><a href="produk.php">Data Produk</a></li>
-                    <!-- <li><a href="kategori.php">Data Kategori</a></li> -->
-                    <li><a href="profil.php">Profil</a></li>
-                    <li><a href="login.php">Login</a></li>
+                    <li><a href="produk.php">Produk</a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
     </header>

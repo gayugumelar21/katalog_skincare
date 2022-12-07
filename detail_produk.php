@@ -22,8 +22,6 @@ $produk = mysqli_query($kon, "SELECT * FROM tb_produk WHERE produk_id = '".$_GET
                 <!-- <h1><a href="index.php">Skincare</a></h1> -->
                 <ul>
                     <li><a href="daftar_produk.php">Beranda</a></li>
-                    <li><a href="produk.php">Data Produk</a></li>
-                    <!-- <li><a href="kategori.php">Data Kategori</a></li> -->
                     <li><a href="profil.php">Profil</a></li>
 					<li><a href="login.php">Login</a></li>
                 </ul>
@@ -48,7 +46,7 @@ $produk = mysqli_query($kon, "SELECT * FROM tb_produk WHERE produk_id = '".$_GET
 			<h3>Detail Produk</h3>
 			<div class="box">
 				<div class="col-2">
-					<img src="produk/<?php echo $p->gambar ?>" width="80%">
+					<img src="/skincare/admin/produk/<?php echo $p->gambar ?>" width="80%">
 				</div>
 				<div class="col-2">
 					<h3><?php echo $p->nama_produk ?></h3>
